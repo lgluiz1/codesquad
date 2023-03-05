@@ -253,9 +253,11 @@ header img{
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 60px;
+    margin: 40px 0px 0px 0px;
     padding: 20px 10px;
     border-top: 1px solid var(--cor-laranja);
     border-bottom: 1px solid var(--cor-laranja);
+    
 }
 .sobre_header{
     width: 300px;
@@ -302,11 +304,156 @@ main{
     margin-top: 50px;
 
 }
+.sobre_codeSquad{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin: 200px 0px 0px 0px;
+    width: 100%;
+    
+}
+.sobre_column{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.sobre_codeSquad::before{
+    content: " ";
+    background: aliceblue;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 690px;
+    opacity: 0.2;
+    z-index: -1;
+}
+.comentario_codesquad h1{
+    font-size: 70px;
+    font-weight: 900;
+}
+.comentario_codesquad p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*--------------------------------------*/
+/*Sobre Animaçao*/
+.logo_sobre-animation{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 310px;
+    animation: rotate_5132  15s linear infinite;
+    
+}
+.svglogo1,.svglogo2, .svglogo3{
+    position: absolute;
+    width: 100px;
+}
+
+.svglogo1{
+    left: 50px;
+    animation: load_5123 5s linear infinite;
+    
+}
+.svglogo2{
+    right: 100px;
+    /*animation: rotate_5132 15s linear infinite;*/
+    
+}
+.svglogo3{
+    right: 50px;
+    animation: load_51231 5s linear infinite;
+}
+
+@keyframes rotate_5132 {
+    0%,
+    42% {
+      transform: rotate(0deg);
+    }
+  
+    48%,
+    92% {
+      transform: rotate(180deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  @keyframes load_5123 {
+    0% {
+        left: 50px;
+    }
+  
+    40%,
+    50% {
+        left: 25px;
+    }
+  
+    90%,
+    100% {
+        left: 50px;
+    }
+  }
+  @keyframes load_51231 {
+    0% {
+        right: 50px;
+    }
+  
+    40%,
+    50% {
+        right: 25px;
+    }
+  
+    90%,
+    100% {
+        right: 50px;
+    }
+  }
+  
+  
+
+/*--------------------------------------*/
+.comentario_codesquad{
+    color: aliceblue;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card_social{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+}
+.card_perfils-1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+.card_perfils-2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+
 /*Cards pefil*/
 .card {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     color: #2e2d31;
     background: var(--cor-laranja);
     overflow: hidden;
@@ -377,3 +524,60 @@ main{
   }
   
 /*--------------------------------------*/  
+/*Social Cards perfil*/
+.social-links,.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+    justify-content: center;
+  }
+  
+  .social-btn svg {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    margin-left: 5px;
+  }
+  
+  .social-btn:hover {
+    width: 150px;
+    border-radius: 5px;
+  }
+  
+  .social-btn:hover span {
+    padding: 2px;
+    width: 80px;
+  }
+  
+  #twitter svg {
+    fill: #1da1f2;
+  }
+  
+  #linkedin svg {
+    fill: #0e76a8;
+  }
+  
+  #github {
+    fill: #333;
+  }
+  
+/*--------------------------------------*/
